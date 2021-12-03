@@ -72,4 +72,5 @@ Update single user
 ## TODOs:
 - [ ] Unit tests
 - [ ] RWD
+- [ ] Typing
 
