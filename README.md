@@ -1,27 +1,71 @@
-# Angular Basic Project
+# Basic Angular Project
+![picture alt](./doc/promo1.png?raw=true "promo")
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.
+## Required to run project
+* Node.js v12.14.0
+* NPM v6.13.4
+* Through NPM install following:
+```sh
+	npm install –g @angular/cli@12.2.0
+```
+
+
+Quick Setup
+----------------------------------------------------------
+
+```sh
+npm run server
+npm run start
+```
+Please let backend heroku instance to load. This may take up to several seconds.
+
+## Technology stack
+* Angular 12
+* NgRx (State Management)
+* Material
+
+## Features
+* Good architecture
+* Field tested NgRx architecture & new syntax
+* Routing setup
+* Api client per environment setup
+* Global css variables and auto structure resolving
+* CSS BEM
+* TS custom import paths & indexing
+* Postman collection
+* TODO Jasmine SpyObj testing approach
+
+
+- - - -
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm run server` to start a simple node server and `npm run start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- - - -
 
-## Build
+## Rest
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Types of API calls application uses to get data.
 
-## Running unit tests
+- - - -
+__GET: /users 
+Get all users
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+__GET: /users/:id
+Get single user
 
-## Running end-to-end tests
+__POST: /users
+Create single user
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+__PUT: /users/:id
+Update single user
 
-## Further help
+- - - -
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## TODOs:
+- [ ] Unit tests
+- [ ] RWD
+
