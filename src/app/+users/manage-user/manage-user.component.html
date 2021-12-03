@@ -1,0 +1,20 @@
+<div class="manage-user__wrapper">
+    <div class="manage-user__content">
+        <span class="panel__title">Enter valid data of a user.</span>
+        <div class="forms__wrapper">
+            <mat-form-field [class.forms__entry--disabled]="usersStore.editMode$ | async" appearance="standard">
+                <mat-label>Username</mat-label>
+                <input [readonly]="usersStore.editMode$ | async" [formControl]="username" matInput placeholder="Username">
+                <mat-icon matSuffix>perm_identity</mat-icon>
+              </mat-form-field>
+
+              <mat-form-field appearance="standard">
+                <mat-label>Description</mat-label>
+                <input [formControl]="description" matInput placeholder="Description">
+                <mat-icon matSuffix>star_border</mat-icon>
+              </mat-form-field>
+              
+              <button [disabled]="!username.valid || !description.valid" class="forms__submit-btn" (click)="submitUser()" mat-raised-button>{{ (usersStore.editMode$ | async) ? 'Edit User' : 'Create User' }}</button>
+        </div>
+    </div>
+</div>

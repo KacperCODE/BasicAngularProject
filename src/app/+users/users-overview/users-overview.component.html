@@ -1,0 +1,22 @@
+<div class="users-overview__wrapper">
+    <div class="users-overview__content">
+        <span class="panel__title">Overview of all registered users. Select user to edit.</span>
+
+        <ng-container *ngIf="(usersStore.usersLoaded$ | async) then loaded; else loading"></ng-container>
+                
+        <ng-template #loaded>
+            <ng-container *ngIf="(usersStore.users$ | async) as users">
+                <div (click)="editUser(user)" class="users__entry" *ngFor="let user of users">
+                    <span class="users__entry--highlight">{{ user.username }}</span>
+                    <span>{{ user.description }}</span>
+                </div>
+            </ng-container>
+            
+        </ng-template>
+
+        <ng-template #loading>
+            <app-loader></app-loader>
+        </ng-template>
+
+    </div>
+</div>

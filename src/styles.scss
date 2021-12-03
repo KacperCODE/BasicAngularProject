@@ -1,0 +1,51 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+$color: (
+  orange-heavy: #F09819,
+  orange-light: #EDDE5D,
+  white: white,
+  black: black
+);
+
+@mixin colored-box {
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: map-get($color, white);            
+   border-radius: 10px;
+   display: block;
+   background-image: linear-gradient(to right, map-get($color, orange-heavy) 0%, map-get($color, orange-light)  51%, map-get($color, orange-heavy)  100%);
+   box-shadow: 8px 8px 26px -21px rgba(66, 68, 90, 1);
+
+   &:hover {
+    background-image: linear-gradient(to right, map-get($color, orange-heavy) 0%, map-get($color, orange-light)  55%, map-get($color, orange-heavy)  100%);
+    color: map-get($color, white);
+    text-decoration: none;
+  }
+ }
+
+ @mixin container-box {
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: map-get($color, white);
+  border-radius: 10px;
+  display: block;
+  background-color: map-get($color, white);
+  width: 640px;
+  box-shadow: 8px 8px 26px -11px rgb(66 68 90);
+ }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.app__wrapper * {
+  color: map-get($color, black);
+}
