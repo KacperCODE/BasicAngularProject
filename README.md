@@ -17,7 +17,6 @@ Quick Setup
 npm run server
 npm run start
 ```
-Please let backend heroku instance to load. This may take up to several seconds.
 
 ## Technology stack
 * Angular 12
