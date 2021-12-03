@@ -51,15 +51,19 @@ Types of API calls application uses to get data.
 
 - - - -
 __GET: /users 
+
 Get all users
 
 __GET: /users/:id
+
 Get single user
 
 __POST: /users
+
 Create single user
 
 __PUT: /users/:id
+
 Update single user
 
 - - - -
